@@ -1,3 +1,67 @@
 body {
-  background: CornflowerBlue;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: lightgray;
+}
+
+header {
+  padding: 1rem;
+  border: 1px solid black;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.nav, .ads {
+  flex: 0 0 12rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.nav {
+  order: -1;
+}
+
+@media screen and (min-width: 1200px) {
+  .desktop {
+    display: block;
+  }
+
+  .tablet, .mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+  .tablet {
+    display: block;
+  }
+  .mobile, .desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .mobile {
+    display: block;
+  }
+  .tablet, .desktop {
+    display: none;
+  }
 }

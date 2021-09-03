@@ -2,15 +2,25 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Browsersync Server Example</title>
+    <title>IFrame POC</title>
     <link rel='stylesheet' href='css/main.css'>
 </head>
 <body>
-    <h1>Browsersync Server Example</h1>
+    <h3>Desktop View</h3>
+    Actual dimensions: 1050x600
+    Iframe dimensions: 1400x800
+    <div class="view-container desktop">
+      <iframe src="http://localhost:8080/iframe.html"></iframe>
+    </div>
 
-    <h3>Scaled iframe</h3>
-    <iframe 
-      src="http://localhost:8081" 
-    ></iframe>
+    <h3>Tablet View (600x800) = (768x1024)</h3>
+    <div class="view-container tablet">
+      <iframe src="http://localhost:8081"></iframe>
+    </div>
+
+    <h3>Mobile View (375x812)</h3>
+    <div class="view-container mobile">
+      <iframe src="http://localhost:8081"></iframe>
+    </div>
 </body>
 </html>
