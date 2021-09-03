@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>IFrame POC</title>
+    <link rel='stylesheet' href='css/main.less'>
+</head>
+<body>
+    <div class="showcase">
+      <div id="mobile" class="device-container mobile">
+        <iframe src="https://laughing-ardinghelli-b931ed.netlify.app/iframe.html"></iframe>
+      </div>
+
+      <div id="desktop" class="device-container desktop">
+        <iframe src="https://laughing-ardinghelli-b931ed.netlify.app/iframe.html"></iframe>
+      </div>
+
+      <div id="tablet" class="device-container tablet">
+        <iframe src="https://laughing-ardinghelli-b931ed.netlify.app/iframe.html"></iframe>
+      </div>
+    </div>
+
+    <div class="debug">
+      <strong>
+        Dimensions (width x height) and iframe scale
+      </strong>
+      <div class="mobile">
+        <strong>Mobile: </strong>
+        <span class="info"></span>
+      </div>
+      <div class="desktop">
+        <strong>Desktop: </strong>
+        <span class="info"></span>
+      </div>
+      <div class="tablet">
+        <strong>Tablet: </strong>
+        <span class="info"></span>
+      </div>
+
+      <button id="screenshot">Take Screenshot</button>
+    </div>
+
+    <script src="./js/main.ts"></script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+@import 'variables';
+
 body {
   display: flex;
   min-height: 100vh;
@@ -24,7 +26,8 @@ header {
   padding: 1rem;
 }
 
-.nav, .ads {
+.nav,
+.ads {
   flex: 0 0 12rem;
   padding: 1rem;
   border: 1px solid black;
@@ -34,26 +37,7 @@ header {
   order: -1;
 }
 
-@media screen and (min-width: 1200px) {
-  .desktop {
-    display: block;
-  }
-
-  .tablet, .mobile {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 1200px) {
-  .tablet {
-    display: block;
-  }
-  .mobile, .desktop {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: @breakpoints[mobile]) {
   .app {
     flex-direction: column;
   }
@@ -61,7 +45,34 @@ header {
   .mobile {
     display: block;
   }
-  .tablet, .desktop {
+  .tablet,
+  .desktop {
+    display: none;
+  }
+}
+
+@max-tablet: @breakpoints[desktop] - 1;
+@media screen and (min-width: @breakpoints[tablet]) and (max-width: @max-tablet) {
+  .app {
+    flex-direction: column;
+  }
+
+  .tablet {
+    display: block;
+  }
+  .mobile,
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: @breakpoints[desktop]) {
+  .desktop {
+    display: block;
+  }
+
+  .tablet,
+  .mobile {
     display: none;
   }
 }
