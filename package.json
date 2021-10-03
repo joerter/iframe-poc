@@ -4,8 +4,8 @@
   "description": "Server example",
   "main": "app.js",
   "scripts": {
-    "start": "parcel src/index.html src/iframe.html",
-    "build": "parcel build src/index.html src/iframe.html"
+    "start": "parcel src/index.html src/iframe.html src/appetize.html",
+    "build": "parcel build src/index.html src/iframe.html src/appetize.html"
   },
   "license": "MIT",
   "devDependencies": {
